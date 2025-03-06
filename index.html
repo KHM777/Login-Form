@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+         <link rel="icon" type="image/png" href="assets/images/kisspng-computer-icons-portable-network-graphics-scalable-exit-icon-free-download-png-and-vector-5c59fb4b570890.9384554015494009073565.png">
+</head>
+<body>
+<div class="main-container">
+    <div class="form-wrapper">
+        <div class="form-title">Login</div>
+        <form>
+            <div class="field">
+                <input class="inp" type="text" id="username" required autocomplete="off">
+                <label class="label" for="username">Username</label>
+                <span class="bi bi-person"></span>
+            </div>
+            <div class="field">
+                <input class="inp" type="password" id="password" required>
+                <label class="label" for="password">Password</label>
+                <span class="toggle-pass bi bi-eye"></span>
+            </div>
+            <div class="action">
+                <label for="save-info">
+                    <input type="checkbox" id="save-info">
+                    Stay signed in</label>
+                <a href="#">Need help signing in?</a>
+            </div>
+            <input type="submit" value="Login" id="login-btn">
+        </form>
+        <div class="separator">or</div>
+        <div class="alternative">
+            <button class="bi bi-twitter-x"></button>
+            <button class="bi bi-pinterest"></button>
+            <button class="bi bi-google"></button>
+            <button class="bi bi-facebook"></button>
+            <button class="bi bi-discord"></button>
+        </div>
+        <div class="bottom">Not a member yet? <a href="#">Register Here</a></div>
+    </div>
+    <div class="bg"></div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
