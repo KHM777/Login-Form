@@ -1,38 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const passwordInput = document.querySelector('#password');
-    const usernameInput = document.querySelector('#username');
-    const toggleIcon = document.querySelector('.toggle-pass');
-    const loginForm = document.querySelector('form');
-    const message = document.createElement('p'); // لإنشاء رسالة التحذير
-    message.style.textAlign = "center";
-    message.style.marginTop = "10px";
+document.getElementById("login-btn").addEventListener("click", function (e) {
+    e.preventDefault();
 
-    loginForm.appendChild(message); // إضافة الرسالة أسفل الفورم
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // تبديل إظهار كلمة المرور عند الضغط على الأيقونة
-    toggleIcon.addEventListener('click', () => {
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            toggleIcon.classList.replace('bi-eye', 'bi-eye-slash');
-        } else {
-            passwordInput.type = 'password';
-            toggleIcon.classList.replace('bi-eye-slash', 'bi-eye');
-        }
-    });
+    let validUser = users.find(user => user.username === username && user.password === password);
 
-    // التحقق من بيانات تسجيل الدخول عند الضغط على الزر
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // منع إعادة تحميل الصفحة عند إرسال الفورم
+    if (validUser) {
+        // حفظ المستخدم الحالي ليبقى مسجلًا
+        localStorage.setItem("loggedUser", JSON.stringify(validUser));
 
-        const username = usernameInput.value.trim();
-        const password = passwordInput.value.trim();
-
-        if (username === "KHaled" && password === "123") {
-            message.style.color = "green";
-            message.textContent = "✅ Login Success!";
-        } else {
-            message.style.color = "red";
-            message.textContent = "❌ Incorrect Username OR Password!";
-        }
-    });
+        window.location.href = "chat.html"; // الانتقال إلى الشات
+    } else {
+        alert("بيانات الدخول غير صحيحة، أو الحساب غير مسجل.");
+    }
 });
