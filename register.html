@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-<!--    <link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="form-wrapper">
-            <div class="form-title">Register</div>
-            <form>
-                <div class="field">
-                    <input class="inp" type="text" id="new-username" required autocomplete="off">
-                    <label class="label" for="new-username">Username</label>
-                </div>
-                <div class="field">
-                    <input class="inp" type="password" id="new-password" required>
-                    <label class="label" for="new-password">Password</label>
-                </div>
-                <input type="submit" value="Register" id="register-btn">
-            </form>
-            <div class="bottom">Already have an account? <a href="index.html">Login Here</a></div>
-        </div>
+<div class="main-container">
+    <div class="form-wrapper">
+        <div class="form-title">Register</div>
+        <form>
+            <div class="field">
+                <input class="inp" type="text" id="new-username" required autocomplete="off">
+                <label class="label" for="new-username">Username</label>
+                <span class="bi bi-person"></span>
+            </div>
+            <div class="field">
+                <input class="inp" type="password" id="new-password" required>
+                <label class="label" for="new-password">Password</label>
+                <span class="toggle-pass bi bi-eye"></span>
+            </div>
+            <input type="submit" value="Register" id="register-btn">
+        </form>
+        <div class="bottom">Already have an account? <a href="index.html">Login Here</a></div>
     </div>
-    <script src="register.js"></script>
+    <div class="bg"></div>
+</div>
+<script src="register.js"></script>
 </body>
 </html>
