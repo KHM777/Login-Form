@@ -33,3 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const helpLink = document.getElementById("help-link");
+    const helpMessage = document.getElementById("help-message");
+    const closeBtn = document.getElementById("close-help");
+
+    helpLink.addEventListener("click", function (event) {
+        event.preventDefault(); // منع التنقل إلى #
+        helpMessage.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", function () {
+        helpMessage.classList.remove("show");
+    });
+});
+
