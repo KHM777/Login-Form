@@ -54,3 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// تسجيل الدخول كضيف
+document.getElementById("guest-login").addEventListener("click", function () {
+    let guestUser = {
+        username: "Guest_" + Math.floor(Math.random() * 1000), // توليد اسم عشوائي للضيف
+        isGuest: true
+    };
+
+    sessionStorage.setItem("loggedUser", JSON.stringify(guestUser)); // حفظ الجلسة مؤقتًا
+//    window.location.href = "chat.html"; // الانتقال إلى صفحة الشات
+});
+

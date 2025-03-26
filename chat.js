@@ -99,26 +99,24 @@
 //});
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    let user = JSON.parse(localStorage.getItem("loggedUser"));
-
-    if (!user) {
-        alert("يرجى تسجيل الدخول أولًا.");
-        window.location.href = "index.html";
-    } else {
-        document.getElementById("chat-box").innerHTML += `<p>مرحبًا، ${user.username}!</p>`;
-    }
-
-    document.getElementById("send-btn").addEventListener("click", function () {
-        let message = document.getElementById("message-input").value;
-        if (message.trim() !== "") {
-            document.getElementById("chat-box").innerHTML += `<p>${user.username}: ${message}</p>`;
-            document.getElementById("message-input").value = "";
-        }
-    });
-});
-document.getElementById("logout-btn").addEventListener("click", function () {
-    localStorage.removeItem("loggedUser");
-    window.location.href = "index.html"; // إعادة التوجيه لصفحة تسجيل الدخول
-});
-
+//document.addEventListener("DOMContentLoaded", function () {
+//    let user = JSON.parse(localStorage.getItem("loggedUser"));
+//
+//    if (!user) {
+//        alert("يرجى تسجيل الدخول أولًا.");
+//        window.location.href = "index.html";
+//    } else {
+//        document.getElementById("chat-box").innerHTML += `<p>مرحبًا، ${user.username}!</p>`;
+//    }
+//
+//    document.getElementById("send-btn").addEventListener("click", function () {
+//        let message = document.getElementById("message-input").value;
+//        if (message.trim() !== "") {
+//            document.getElementById("chat-box").innerHTML += `<p>${user.username}: ${message}</p>`;
+//            document.getElementById("message-input").value = "";
+//        }
+//    });
+//});
+//document.getElementById("logout-btn").addEventListener("click", function () {
+//    localStorage.removeItem("loggedUser");
+//    window.location.href = "index.html"; // إعادة التوجيه �

@@ -112,6 +112,18 @@ form input {
     padding: 5px 0;
 }
 
+#guest-login {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.089);
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    font-size: 18px;
+    font-family: 'Calibri';
+    padding: 5px 0;
+}
+
 .separator {
     display: flex;
     justify-content: center;
@@ -147,6 +159,11 @@ form input {
 }
 
 #login-btn:hover,
+.alternative button:hover {
+    opacity: 0.8;
+}
+
+#guest-login:hover,
 .alternative button:hover {
     opacity: 0.8;
 }
