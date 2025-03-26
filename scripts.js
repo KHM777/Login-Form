@@ -16,3 +16,20 @@ document.getElementById("login-btn").addEventListener("click", function (e) {
         alert("بيانات الدخول غير صحيحة، أو الحساب غير مسجل.");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const passwordInput = document.getElementById("new-password");
+    const toggleIcon = document.querySelector(".toggle-pass");
+
+    toggleIcon.addEventListener("click", function () {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            toggleIcon.classList.remove("bi-eye-slash");
+            toggleIcon.classList.add("bi-eye");
+        } else {
+            passwordInput.type = "password";
+            toggleIcon.classList.remove("bi-eye");
+            toggleIcon.classList.add("bi-eye-slash");
+        }
+    });
+});
