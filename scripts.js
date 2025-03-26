@@ -1,3 +1,4 @@
+// Login
 document.getElementById("login-btn").addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -17,6 +18,8 @@ document.getElementById("login-btn").addEventListener("click", function (e) {
     }
 });
 
+//Show Password
+
 document.addEventListener("DOMContentLoaded", function () {
     const passwordInput = document.getElementById("password");
     const toggleIcon = document.querySelector(".toggle-pass");
@@ -33,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Message
 
 document.addEventListener("DOMContentLoaded", function () {
     const helpLink = document.getElementById("help-link");
