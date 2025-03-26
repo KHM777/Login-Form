@@ -18,7 +18,7 @@ document.getElementById("login-btn").addEventListener("click", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const passwordInput = document.getElementById("new-password");
+    const passwordInput = document.getElementById("password");
     const toggleIcon = document.querySelector(".toggle-pass");
 
     toggleIcon.addEventListener("click", function () {
